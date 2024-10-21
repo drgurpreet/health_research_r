@@ -1,0 +1,27 @@
+---
+title: "My Test Page"
+format: html
+---
+
+This is a new version of the Document
+
+# Welcome to Github Pages
+
+The steps to do this are:
+
+1. Create a Github repository on Github website
+2. Create the R Project that you want to publish
+3. Initiate the Git Repository on RStudio Terminal using the command `git init`
+4. Render your QMD and name it as `index.qmd`
+5. Add your rendered page on Github, you can do this by the command `git add .`
+6. Specify your branch `git branch -M main`
+7. Commit the changes `git commit -m "This is my commit message"`
+8. Push the changes on GitHub. `git push -u origin main`
+9. Go to GitHub Settings > Pages and change the branch from None to `main`
+10. And then Press Save.
+11. Go to the repository. and Change press the Gear Button in the About Section.
+12. Select the Tick Mark on "Use your GitHub Pages website "
+13. Go to GitHub Actions Pane and wait till the Build and Deploy is done (Green Tick Mark)
+
+*This is it!*
+

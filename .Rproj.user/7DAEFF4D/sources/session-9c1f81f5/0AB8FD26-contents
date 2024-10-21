@@ -1,0 +1,116 @@
+# Statistical Summary Tables
+
+```{r}
+#| echo: false
+#| warning: false
+
+library(tidyverse)
+library(gtsummary)
+df <- rio::import(here::here("data",
+                             "lbw.dta"),
+                  setclass = "tibble")
+df <- df |> 
+  rename(child_weight_cat = low,
+         maternal_age = age,
+         maternal_weight = lwt,
+         number_preterm = ptl,
+         hypertension = ht,
+         uterine_irritability = ui,
+         health_visits = ftv,
+         birth_weight = bwt)
+df <- df |> 
+  mutate(smoke_cat = factor(smoke, 
+                            levels = c(0,1),
+                            labels = c("Non-smoker",
+                                       "Smoker")),
+         race_cat = factor(race,
+                           levels = c(1,2,3),
+                           labels = c("White",
+                                      "Black",
+                                      "Other")),
+         child_weight_cat = factor(child_weight_cat,
+                                   levels = c(0,1),
+                                   labels = c("Normal", "Low Birth Weight")))
+```
+
+## Introduction.
+
+Till now, you have been exploring and understanding datasets. After EDA, the analysis phase is undertaken wherein you need to look carefully at associations between the outcome and exposure variables, in other words, independent and dependent variables. There can be two variables wherein you are interested in associations such as independent sample t-tests for difference between means, or a Chi-square test, or paired test, etc depending on the variables and Research Questions.
+
+In this session, we shall take you through some commonly used tests and their presentation tables including basics of regression models.
+
+## Inferential statistics: An overview
+
+### Is birth weight associated with Maternal factors?
+
+For this question, the summary statistics should be split by birth weight categories, which can be done by using the `by=` argument. To compare two or more groups, include `add_p()` with the function call, which detects variable type and uses an appropriate statistical test.
+
+::: column-margin
+::: {.callout-caution}
+The tbl_summary() provides outputs and inferential statistics according to computed distribution. It is important to consider which test to apply and when.. discuss!!
+:::
+:::
+
+```{r}
+df |> 
+  select(-smoke,
+         -race) |> 
+  tbl_summary(
+    statistic = all_continuous() ~ "{mean}, {sd}",
+    label = list(maternal_weight ~ "Maternal Weight",
+                 maternal_age ~ "Maternal Age",
+                 smoke_cat ~ "Smoking History"),
+    by = child_weight_cat
+  ) |> 
+  add_p()
+```
+
+### Specifying which test to apply
+
+```{r}
+df |> 
+  select(-smoke,
+         -race) |> 
+  tbl_summary(
+    statistic = all_continuous() ~ "{mean}, {sd}",
+    label = list(maternal_weight ~ "Maternal Weight",
+                 maternal_age ~ "Maternal Age",
+                 smoke_cat ~ "Smoking History"),
+    by = child_weight_cat
+  ) |> 
+  add_p(all_continuous() ~ "t.test")
+```
+
+## Correlation matrices
+
+**Example**. As a researcher, you might be interested in knowing the correlation between maternal weight, number of preterm births, number of health visits and child birth weight. 
+
+```{r}
+GGally::ggpairs(df |> 
+          select(maternal_age, maternal_weight,
+                 number_preterm, health_visits,
+                 birth_weight),
+        title="Illustration: Correlation Matrix") 
+```
+
+## Regression analysis tables
+
+The `tbl_regression()` function takes a regression model *object* in R and returns a formatted table of regression model results that is publication-ready. It is a simple way to summarize and present your analysis results using R! Like `tbl_summary()`, `tbl_regression()` creates highly customizable analytic tables with sensible defaults.
+
+```{r}
+# build logistic regression model
+m1 <- glm(child_weight_cat ~ maternal_age + smoke_cat, 
+          data = df, 
+          family = binomial)
+
+# view raw model results
+summary(m1)$coefficients
+
+# Create presentation table
+tbl_regression(m1, exponentiate = TRUE)
+```
+
+
+## Summary.
+
+In this section, we have introduced you to creating presentable tables for inferential statistics, correlation, and regression tables. Considering time, we are not dwelling deep into which test to apply and when concept. Rather we have focused on how to do them. It is strongly recommended to use these powerful tools in consultation with a Statistician/ Epidemiologist for meaningful inferences and robust methodologies. Hope you had an enjoyable learning during the sessions and we could answer your queries and show you additional resources during the workshop. Be in touch...Happy Learning!

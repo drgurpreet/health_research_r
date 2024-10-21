@@ -1,0 +1,179 @@
+# Exploratory Data Analysis (Descriptive statistics)
+
+```{r}
+#| echo: false
+#| warning: false
+
+library(tidyverse)
+library(gtsummary)
+df <- rio::import(here::here("data",
+                             "lbw.dta"),
+                  setclass = "tibble")
+df <- df |> 
+  rename(child_weight_cat = low,
+         maternal_age = age,
+         maternal_weight = lwt,
+         number_preterm = ptl,
+         hypertension = ht,
+         uterine_irritability = ui,
+         health_visits = ftv,
+         birth_weight = bwt)
+df <- df |> 
+  mutate(smoke_cat = factor(smoke, 
+                            levels = c(0,1),
+                            labels = c("Non-smoker",
+                                       "Smoker")),
+         race_cat = factor(race,
+                           levels = c(1,2,3),
+                           labels = c("White",
+                                      "Black",
+                                      "Other")),
+         child_weight_cat = factor(child_weight_cat,
+                                   levels = c(0,1),
+                                   labels = c("Normal", "Low Birth Weight")))
+```
+
+
+## Introduction
+
+Exploratory Data Analysis or EDA is the critical process of performing initial investigations on data to discover patterns, spot anomalies, test hypotheses and check assumptions with the help of summary statistics and graphical representations.
+
+The major objective of this session is to teach participants on basics of exploring datasets and develop an understanding about the datasets using descriptive statistics and summary tables. In the next session, we shall explore visualization methods. 
+
+
+## Descriptive statistics
+
+As in the previous session, lets look at some summary statistics using `summary()` function.
+
+```{r}
+df |> summary()
+```
+
+## Calculating mean and sd of maternal age.
+
+`summarise()` function helps in obtaining summary statistics. The output has a summary statistics as asked within this function. In this example, we have used `mean` and `sd` functions for the same. 
+
+```{r}
+df |> 
+  select(maternal_age) |> 
+  summarise(mean_age = mean(maternal_age),
+            sd_age = sd(maternal_age))
+```
+
+
+
+
+## Presentation tables for descriptive statistics
+
+
+::: {.callout-important}
+Though we were able to get the summary statistics, in routine, it is very time consuming, frustrating and error prone to write again the results/ outputs obtained from statistical software into the writing and communication documents, be it an article/ manuscript or a dissertation or a thesis. In R, there are certain packages which enable you to create **publication ready tables** which can be incorporated into research dissemination documents directly or with minor modifications. This saves a lot of mundane and unnecessary work and provides more time for interpretation and domain expertise related work. `gtsummary` package creates presentation-ready tables summarizing data sets, regression models, and more. The code to create the tables is concise and highly customizable. 
+:::
+
+
+## Maternal characteristics: An illustrative example. {.unnumbered}
+
+The `tbl_summary()` function calculates descriptive statistics for continuous, categorical, and dichotomous variables in R, and presents the results in a beautiful, customizable summary table ready for publication. To introduce `tbl_summary()` we will show the most basic behaviour first, which actually produces a large and beautiful table. Then, we will examine in detail how to make adjustments and more tailored tables.The default behavior of tbl_summary() is quite incredible - it takes the columns you provide and creates a summary table in one command. The function prints statistics appropriate to the column class: median and inter-quartile range (IQR) for numeric columns, and counts (%) for categorical columns. Missing values are converted to 'Unknown'. 
+
+```{r}
+df |> 
+  select(maternal_age, maternal_weight,
+         race_cat, smoke_cat) |> 
+  tbl_summary()
+```
+
+### Customizing output of selected variables.  
+
+::: column-margin
+Use equations to specify which statistics to show and how to display them. There are two sides to the equation, separated by a tilde `~`. On the right side, in quotes, is the statistical display desired, and on the left are the columns to which that display will apply.
+:::
+
+```{r}
+df |> 
+  select(maternal_age, maternal_weight,
+         race_cat, smoke_cat) |> 
+  tbl_summary(
+    statistic = maternal_age ~ "{mean}, {sd}"
+  )
+```
+
+
+
+### Customizing output of selected variable type. 
+
+::: column-margin
+Use equations to specify which statistics to show and how to display them. There are two sides to the equation, separated by a tilde `~`. On the right side, in quotes, is the statistical display desired, and on the left are the list of columns to which that display will apply.
+:::
+
+```{r}
+df |> 
+  select(maternal_age, maternal_weight,
+         race_cat, smoke_cat) |> 
+  tbl_summary(
+    statistic = all_continuous() ~ "{mean}, {sd}"
+  )
+```
+
+
+
+### Changing label of a single variable.  
+
+::: column-margin
+Adjust how the column name should be displayed. Provide the column name and its desired label separated by a tilde. The default is the column name. This is done with help of argument `label = ` in `tbl_summary` function. 
+:::
+
+```{r}
+df |> 
+  select(maternal_age, maternal_weight,
+         race_cat, smoke_cat) |> 
+  tbl_summary(
+    statistic = all_continuous() ~ "{mean}, {sd}",
+    label = maternal_weight ~ "Maternal Weight"
+  )
+```
+
+
+### Changing labels of multiple variables.  
+
+::: column-margin
+You can change labels of multiple variables by providing the labels as a `list` to the `label` argument.  
+:::
+
+```{r}
+df |> 
+  select(maternal_age, maternal_weight,
+         race_cat, smoke_cat) |> 
+  tbl_summary(
+    statistic = all_continuous() ~ "{mean}, {sd}",
+    label = list(maternal_weight ~ "Maternal Weight",
+                 maternal_age ~ "Maternal Age")
+  )
+```
+
+
+### Comparing group summaries.
+
+```{r}
+df |> 
+  select(maternal_age, maternal_weight,
+         race_cat, smoke_cat) |> 
+  tbl_summary(
+    statistic = all_continuous() ~ "{mean}, {sd}",
+    label = list(maternal_weight ~ "Maternal Weight",
+                 maternal_age ~ "Maternal Age",
+                 smoke_cat ~ "Smoking History"),
+    by = race_cat
+  )
+```
+
+
+
+## Summary.
+
+In this session, we looked at summarise function and basics of gtsummary's `tbl_summary` function for EDA. We shall be using these basic concepts further during the analysis in subsequent sessions.
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: "./"
+
+website:
+  title: "Hands-on Workshop on Research Methodology using R: NHSRC 2024"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - intro.qmd
+      - understand_wrangle.qmd
+      - eda.qmd
+      - visualization.qmd
+      - stat_summaries.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 4
+    number-sections: true
+    number-depth: 3
+    code-fold: true
+    
+execute: 
+  warning: false
+
+
+
