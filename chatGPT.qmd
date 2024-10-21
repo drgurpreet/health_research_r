@@ -1,0 +1,106 @@
+# Advanced: Overview of AI tools and GitHub
+
+**Source:** *ChatGPT. (2024, October 22). Integrating AI Tools for Data Science: A Guide for Healthcare Professionals. OpenAI. https://chat.openai.com/*
+
+## Use of openai (ChatGPT)
+
+ChatGPT is an AI tool that can assist with code writing, debugging, visualization, and problem-solving in R, especially when using the tidyverse package. By incorporating ChatGPT into your data analysis workflow, you can enhance productivity, improve code quality, and expedite the learning process. Below is a structured guide on how you can leverage ChatGPT effectively in your data science workflow.
+
+### General Code Writing
+
+- Generate Code Templates: Ask ChatGPT to provide template code for tasks like data wrangling or visualization. Example: "*How do I filter rows based on a column value in R using dplyr?*"
+
+- Convert Pseudocode to R Code: Write your logic in plain English, and ChatGPT can translate it into R code. Example: "*Write R code to group data by state and calculate the mean of a numeric column.*"
+
+### Debugging and Error Handling
+
+- Troubleshoot Errors: Share error messages with ChatGPT to get suggestions for fixes. Example: "*I'm getting 'Error: object not found'—how do I fix it?*"
+
+- Optimize Code: ChatGPT can suggest alternative, more efficient code using tidyverse functions.
+Example: "*Is there a better way to combine multiple mutate statements?*"
+
+### ggplot2 Visualization Support
+
+- Create Plots from Scratch: Describe the data and desired visualization, and ChatGPT will generate the corresponding ggplot2 code. Example: "*How do I create a scatter plot with color based on gender?*"
+
+- Enhance Visuals: Ask for improvements like changing themes, adding titles, or customizing colors. Example: "*Improve the following bar plot by using a better theme and adding labels.*"
+
+- Troubleshoot ggplot Issues: If a plot isn’t displaying as expected, provide the code and ask for corrections. Example: "*Why is my legend not showing up in this plot?*"
+
+### Data Wrangling with tidyverse
+
+- Get Help with Transformations: Explain your data structure and desired outcome to get tidyverse code for tasks like pivoting, grouping, or filtering. Example: "*How do I reshape data from long to wide format?*"
+
+- Code Review: Paste your code for ChatGPT to review and improve readability or functionality.
+Example: "*Can you simplify this chain of dplyr commands?*"
+
+### Learning and Exploring R Functions
+
+- Discover New Functions: Ask about specific packages or new functions that suit your needs.
+Example: "*Is there an easier way to handle missing values in tidyverse?*"
+
+- Understand Code Snippets: If you encounter unfamiliar code, paste it and ask for an explanation.
+Example: "*What does across() do in this code?*"
+
+
+### Advanced Analytics and Machine Learning
+
+- Modeling with tidymodels: Get help building predictive models using tidymodels.
+Example: "*How do I train a logistic regression model using tidymodels?*"
+
+- Interpreting Results: ChatGPT can assist in understanding output from statistical models.
+Example: "*What does the p-value indicate in this summary?*"
+
+### Best Practices for ChatGPT Usage
+
+- Be Sensitive: The more details you provide about your problem, the better the solution.
+Example: "*How do I calculate the weighted mean for a survey dataset using survey package in R?*"
+
+- Iterate and Refine: If the initial response isn't perfect, refine your query or ask for clarifications.
+Example: "*Can you modify the code to include a facet grid by gender?*"
+
+- Explore Alternatives: Request multiple approaches to solve a problem or plot data differently.
+Example: "*Can you show another way to visualize this data besides a bar plot?*"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Use of GitHub 
+
+GitHub is a platform for version control and collaboration using Git. It allows you to store code, track changes, and collaborate with others on data science projects. By integrating ChatGPT and GitHub into your workflow, healthcare professionals can efficiently develop, document, and collaborate on data science projects. 
+
+### Creating a GitHub repository
+
+- Create a New Repository: Log into GitHub and click New Repository.
+- Initialize the Repo: Add a README.md and select whether to add .gitignore or a license.
+- Clone the Repository: Use the command below to copy the repository locally
+
+
+### Best Practices for Using ChatGPT and GitHub Together
+
+- Document Code Changes: Use ChatGPT to generate clear commit messages and update documentation.
+- Collaborative Coding: Discuss coding challenges with ChatGPT and refine your GitHub project using suggestions.
+- Experiment Safely: Use Git branches for experimentation and ask ChatGPT for guidance when working with complex code.
+
+
+
+## Using AI tools
+
+- ChatGPT: General Code Assistance & Troubleshooting
+- GitHub Copilot: AI for Code Completion
+- Google Bard: AI for Information Retrieval and Research
+- Microsoft Excel Copilot: AI for Data Management
+- AutoML Platforms (e.g., Google Cloud AutoML, H2O.ai)
+- RStudio AI Features & Plugins
+
+

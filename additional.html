@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Hands-on Workshop on Research Methodology using R: NHSRC 2024</title>
+<title>additional – Hands-on Workshop on Research Methodology using R: NHSRC 2024</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -117,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Advanced: Overview of AI tools and GitHub</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./additional.html"> 
+    <a class="nav-link active" href="./additional.html" aria-current="page"> 
 <span class="menu-text">Resource materials</span></a>
   </li>  
 </ul>
@@ -136,17 +136,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
+  <li><a href="#resource-materials" id="toc-resource-materials" class="nav-link active" data-scroll-target="#resource-materials"><span class="header-section-number">1</span> Resource materials</a>
   <ul>
-  <li><a href="#workshop-goals." id="toc-workshop-goals." class="nav-link" data-scroll-target="#workshop-goals."><span class="header-section-number">0.1</span> Workshop Goals.</a></li>
-  <li><a href="#key-topics." id="toc-key-topics." class="nav-link" data-scroll-target="#key-topics."><span class="header-section-number">0.2</span> Key Topics.</a>
-  <ul class="collapse">
-  <li><a href="#data-wrangling-and-transformations." id="toc-data-wrangling-and-transformations." class="nav-link" data-scroll-target="#data-wrangling-and-transformations."><span class="header-section-number">0.2.1</span> Data wrangling and transformations.</a></li>
-  <li><a href="#data-visualization." id="toc-data-visualization." class="nav-link" data-scroll-target="#data-visualization."><span class="header-section-number">0.2.2</span> Data Visualization.</a></li>
-  <li><a href="#publication-ready-summary-tables." id="toc-publication-ready-summary-tables." class="nav-link" data-scroll-target="#publication-ready-summary-tables."><span class="header-section-number">0.2.3</span> Publication Ready Summary Tables.</a></li>
-  <li><a href="#reproducible-research-projects-and-workflows." id="toc-reproducible-research-projects-and-workflows." class="nav-link" data-scroll-target="#reproducible-research-projects-and-workflows."><span class="header-section-number">0.2.4</span> Reproducible Research Projects and Workflows.</a></li>
-  </ul></li>
-  <li><a href="#expected-outcomes." id="toc-expected-outcomes." class="nav-link" data-scroll-target="#expected-outcomes."><span class="header-section-number">0.3</span> Expected Outcomes.</a></li>
+  <li><a href="#additional-readings" id="toc-additional-readings" class="nav-link" data-scroll-target="#additional-readings"><span class="header-section-number">1.1</span> Additional readings</a></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources"><span class="header-section-number">1.2</span> Additional resources</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -157,42 +150,31 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
-<p>Welcome to the “Research Methodology” workshop being conducted by <strong>National Health System Resource Centre</strong>, New Delhi on 25-26 Oct 2024! Get ready to embark on a transformative journey into the dynamic world of Research and health data science approach using R. This companion workbook is your roadmap and toolkit for our action-packed adventure in R. There are additional resources provided to you during the workshop, however, we shall limit this companion on <strong>how</strong> you can build solid foundations in research using R and RStudio. We’re here to build a rock-solid foundation in data science specifically for healthcare professionals, all while harnessing the full power of the R programming language and the RStudio interface.</p>
-<section id="workshop-goals." class="level2" data-number="0.1">
-<h2 data-number="0.1" class="anchored" data-anchor-id="workshop-goals."><span class="header-section-number">0.1</span> Workshop Goals.</h2>
-<p>Our mission is simple yet ambitious: to empower you with the essential tools and knowledge to undertake epidemiology and health data science projects using R. You’ll dive deep into the R programming language, navigate the versatile <strong>RStudio</strong> environment, and leverage the <code>tidyverse</code> workflow for cutting-edge data analysis. By the end, you’ll be a healthcare professional who is equipped with the concepts and information needed to make your path in the exciting world of Healthcare research and Health Data Science.</p>
-</section>
-<section id="key-topics." class="level2" data-number="0.2">
-<h2 data-number="0.2" class="anchored" data-anchor-id="key-topics."><span class="header-section-number">0.2</span> Key Topics.</h2>
-<section id="data-wrangling-and-transformations." class="level3" data-number="0.2.1">
-<h3 data-number="0.2.1" class="anchored" data-anchor-id="data-wrangling-and-transformations."><span class="header-section-number">0.2.1</span> Data wrangling and transformations.</h3>
-<p>Learn to clean, reshape, and prepare your datasets like a pro, tackling common challenges using the power of data manipulation and transformation.</p>
-</section>
-<section id="data-visualization." class="level3" data-number="0.2.2">
-<h3 data-number="0.2.2" class="anchored" data-anchor-id="data-visualization."><span class="header-section-number">0.2.2</span> Data Visualization.</h3>
-<p>Learn to create informative and aesthetically pleasing charts using the versatile <code>ggplot2</code> package. Turn data into compelling stories with stunning visualizations using various ggplot extensions.</p>
-</section>
-<section id="publication-ready-summary-tables." class="level3" data-number="0.2.3">
-<h3 data-number="0.2.3" class="anchored" data-anchor-id="publication-ready-summary-tables."><span class="header-section-number">0.2.3</span> Publication Ready Summary Tables.</h3>
-<p>Learn to create Publication ready summary tables for descriptive and inferential statistics.</p>
-</section>
-<section id="reproducible-research-projects-and-workflows." class="level3" data-number="0.2.4">
-<h3 data-number="0.2.4" class="anchored" data-anchor-id="reproducible-research-projects-and-workflows."><span class="header-section-number">0.2.4</span> Reproducible Research Projects and Workflows.</h3>
-<p>Learn to document your processes meticulously, ensuring your analyses are transparent, replicable, and credible. Kick-start you research journey with reproducible workflows.</p>
-</section>
-</section>
-<section id="expected-outcomes." class="level2" data-number="0.3">
-<h2 data-number="0.3" class="anchored" data-anchor-id="expected-outcomes."><span class="header-section-number">0.3</span> Expected Outcomes.</h2>
-<p>By the end of this workshop, you’ll be able to undertake:</p>
+<section id="resource-materials" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Resource materials</h1>
+<section id="additional-readings" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="additional-readings"><span class="header-section-number">1.1</span> Additional readings</h2>
 <ul>
-<li><p><strong>Data Wrangling</strong>: Import data from various sources into R, clean and pre-process data for further analysis and transform data to explore insights and interpretations.</p></li>
-<li><p><strong>Data Visualization</strong>: Create a variety of data visualizations (plots and charts), customize visualizations to highlight key trends and communicate them effectively and apply the best practices of data visualization to make them impactful.</p></li>
-<li><p><strong>Reproducible Research</strong>: Clear and well-documented research workflows, efficiently organise your data and files for epidemiological research and data-science projects.</p></li>
+<li><p>Grolemund, H., &amp; Wickham, H. (2017). R for Data Science. O’Reilly Media. <a href="https://r4ds.had.co.nz/" class="uri">https://r4ds.had.co.nz/</a></p></li>
+<li><p>James, G., Witten, D., Hastie, T., &amp; Tibshirani, R. (2013). An Introduction to Statistical Learning with Applications in R. Springer. <a href="https://www.statlearning.com/" class="uri">https://www.statlearning.com/</a></p></li>
+<li><p>Wickham, H. (2016). ggplot2: Elegant Graphics for Data Analysis. Springer. <a href="https://ggplot2-book.org/" class="uri">https://ggplot2-book.org/</a></p></li>
+<li><p>Venables, W. N., &amp; Ripley, B. D. (2002). Modern Applied Statistics with S (4th ed.). Springer. <a href="https://www.stats.ox.ac.uk/pub/MASS4/" class="uri">https://www.stats.ox.ac.uk/pub/MASS4/</a></p></li>
+<li><p>Peng, R. D. (2015). R Programming for Data Science. Leanpub. <a href="https://bookdown.org/rdpeng/rprogdatascience/" class="uri">https://bookdown.org/rdpeng/rprogdatascience/</a></p></li>
+<li><p>Kuhn, M., &amp; Johnson, K. (2013). Applied Predictive Modeling. Springer. <a href="https://topepo.github.io/caret/" class="uri">https://topepo.github.io/caret/</a></p></li>
+<li><p>McKinney, W. (2017). Python for Data Analysis (2nd ed.). O’Reilly Media. <a href="https://www.oreilly.com/library/view/python-for-data/9781491957653/" class="uri">https://www.oreilly.com/library/view/python-for-data/9781491957653/</a> [Note: While this book focuses on Python, it offers valuable insights into data manipulation and analysis that are transferable to R.]</p></li>
 </ul>
-<p>This workshop isn’t just about learning - it’s about transforming the way you interact with data. Whether you’re a beginner eager to dive into the world of programming or a seasoned professional looking to sharpen your skills, this workshop is designed to provide practical knowledge and hands-on experience that will set you apart.</p>
-<p>We’re thrilled to have you join us and can’t wait to see the incredible things you’ll achieve with your new found skills in health data science using R. Let’s dive in and start this exciting journey together!</p>
+</section>
+<section id="additional-resources" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="additional-resources"><span class="header-section-number">1.2</span> Additional resources</h2>
+<ul>
+<li><p>ggplot2 Gallery: <a href="https://exts.ggplot2.tidyverse.org/gallery/" class="uri">https://exts.ggplot2.tidyverse.org/gallery/</a></p></li>
+<li><p>R Graphics Cookbook: <a href="https://r-graphics.org/" class="uri">https://r-graphics.org/</a></p></li>
+<li><p>Tidyverse Course: <a href="https://jhudatascience.org/tidyversecourse/get-data.html" class="uri">https://jhudatascience.org/tidyversecourse/get-data.html</a></p></li>
+<li><p>Tidyverse Cookbook: <a href="https://rstudio-education.github.io/tidyverse-cookbook/import.html" class="uri">https://rstudio-education.github.io/tidyverse-cookbook/import.html</a></p></li>
+<li><p>Data Wrangling Cheatsheet: <a href="https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf" class="uri">https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf</a></p></li>
+<li><p>R Markdown: The Definitive Guide: <a href="https://bookdown.org/yihui/rmarkdown/" class="uri">https://bookdown.org/yihui/rmarkdown/</a></p></li>
+<li><p>Quarto: <a href="https://quarto.org/" class="uri">https://quarto.org/</a></p></li>
+</ul>
 
 
 </section>

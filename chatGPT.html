@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Hands-on Workshop on Research Methodology using R: NHSRC 2024</title>
+<title>chatgpt – Hands-on Workshop on Research Methodology using R: NHSRC 2024</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -113,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Statistical Summary Tables</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./chatGPT.html"> 
+    <a class="nav-link active" href="./chatGPT.html" aria-current="page"> 
 <span class="menu-text">Advanced: Overview of AI tools and GitHub</span></a>
   </li>  
   <li class="nav-item">
@@ -136,17 +136,24 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
+  <li><a href="#advanced-overview-of-ai-tools-and-github" id="toc-advanced-overview-of-ai-tools-and-github" class="nav-link active" data-scroll-target="#advanced-overview-of-ai-tools-and-github"><span class="header-section-number">1</span> Advanced: Overview of AI tools and GitHub</a>
   <ul>
-  <li><a href="#workshop-goals." id="toc-workshop-goals." class="nav-link" data-scroll-target="#workshop-goals."><span class="header-section-number">0.1</span> Workshop Goals.</a></li>
-  <li><a href="#key-topics." id="toc-key-topics." class="nav-link" data-scroll-target="#key-topics."><span class="header-section-number">0.2</span> Key Topics.</a>
+  <li><a href="#use-of-openai-chatgpt" id="toc-use-of-openai-chatgpt" class="nav-link" data-scroll-target="#use-of-openai-chatgpt"><span class="header-section-number">1.1</span> Use of openai (ChatGPT)</a>
   <ul class="collapse">
-  <li><a href="#data-wrangling-and-transformations." id="toc-data-wrangling-and-transformations." class="nav-link" data-scroll-target="#data-wrangling-and-transformations."><span class="header-section-number">0.2.1</span> Data wrangling and transformations.</a></li>
-  <li><a href="#data-visualization." id="toc-data-visualization." class="nav-link" data-scroll-target="#data-visualization."><span class="header-section-number">0.2.2</span> Data Visualization.</a></li>
-  <li><a href="#publication-ready-summary-tables." id="toc-publication-ready-summary-tables." class="nav-link" data-scroll-target="#publication-ready-summary-tables."><span class="header-section-number">0.2.3</span> Publication Ready Summary Tables.</a></li>
-  <li><a href="#reproducible-research-projects-and-workflows." id="toc-reproducible-research-projects-and-workflows." class="nav-link" data-scroll-target="#reproducible-research-projects-and-workflows."><span class="header-section-number">0.2.4</span> Reproducible Research Projects and Workflows.</a></li>
+  <li><a href="#general-code-writing" id="toc-general-code-writing" class="nav-link" data-scroll-target="#general-code-writing"><span class="header-section-number">1.1.1</span> General Code Writing</a></li>
+  <li><a href="#debugging-and-error-handling" id="toc-debugging-and-error-handling" class="nav-link" data-scroll-target="#debugging-and-error-handling"><span class="header-section-number">1.1.2</span> Debugging and Error Handling</a></li>
+  <li><a href="#ggplot2-visualization-support" id="toc-ggplot2-visualization-support" class="nav-link" data-scroll-target="#ggplot2-visualization-support"><span class="header-section-number">1.1.3</span> ggplot2 Visualization Support</a></li>
+  <li><a href="#data-wrangling-with-tidyverse" id="toc-data-wrangling-with-tidyverse" class="nav-link" data-scroll-target="#data-wrangling-with-tidyverse"><span class="header-section-number">1.1.4</span> Data Wrangling with tidyverse</a></li>
+  <li><a href="#learning-and-exploring-r-functions" id="toc-learning-and-exploring-r-functions" class="nav-link" data-scroll-target="#learning-and-exploring-r-functions"><span class="header-section-number">1.1.5</span> Learning and Exploring R Functions</a></li>
+  <li><a href="#advanced-analytics-and-machine-learning" id="toc-advanced-analytics-and-machine-learning" class="nav-link" data-scroll-target="#advanced-analytics-and-machine-learning"><span class="header-section-number">1.1.6</span> Advanced Analytics and Machine Learning</a></li>
+  <li><a href="#best-practices-for-chatgpt-usage" id="toc-best-practices-for-chatgpt-usage" class="nav-link" data-scroll-target="#best-practices-for-chatgpt-usage"><span class="header-section-number">1.1.7</span> Best Practices for ChatGPT Usage</a></li>
   </ul></li>
-  <li><a href="#expected-outcomes." id="toc-expected-outcomes." class="nav-link" data-scroll-target="#expected-outcomes."><span class="header-section-number">0.3</span> Expected Outcomes.</a></li>
+  <li><a href="#use-of-github" id="toc-use-of-github" class="nav-link" data-scroll-target="#use-of-github"><span class="header-section-number">1.2</span> Use of GitHub</a>
+  <ul class="collapse">
+  <li><a href="#creating-a-github-repository" id="toc-creating-a-github-repository" class="nav-link" data-scroll-target="#creating-a-github-repository"><span class="header-section-number">1.2.1</span> Creating a GitHub repository</a></li>
+  <li><a href="#best-practices-for-using-chatgpt-and-github-together" id="toc-best-practices-for-using-chatgpt-and-github-together" class="nav-link" data-scroll-target="#best-practices-for-using-chatgpt-and-github-together"><span class="header-section-number">1.2.2</span> Best Practices for Using ChatGPT and GitHub Together</a></li>
+  </ul></li>
+  <li><a href="#using-ai-tools" id="toc-using-ai-tools" class="nav-link" data-scroll-target="#using-ai-tools"><span class="header-section-number">1.3</span> Using AI tools</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -157,42 +164,94 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
-<p>Welcome to the “Research Methodology” workshop being conducted by <strong>National Health System Resource Centre</strong>, New Delhi on 25-26 Oct 2024! Get ready to embark on a transformative journey into the dynamic world of Research and health data science approach using R. This companion workbook is your roadmap and toolkit for our action-packed adventure in R. There are additional resources provided to you during the workshop, however, we shall limit this companion on <strong>how</strong> you can build solid foundations in research using R and RStudio. We’re here to build a rock-solid foundation in data science specifically for healthcare professionals, all while harnessing the full power of the R programming language and the RStudio interface.</p>
-<section id="workshop-goals." class="level2" data-number="0.1">
-<h2 data-number="0.1" class="anchored" data-anchor-id="workshop-goals."><span class="header-section-number">0.1</span> Workshop Goals.</h2>
-<p>Our mission is simple yet ambitious: to empower you with the essential tools and knowledge to undertake epidemiology and health data science projects using R. You’ll dive deep into the R programming language, navigate the versatile <strong>RStudio</strong> environment, and leverage the <code>tidyverse</code> workflow for cutting-edge data analysis. By the end, you’ll be a healthcare professional who is equipped with the concepts and information needed to make your path in the exciting world of Healthcare research and Health Data Science.</p>
-</section>
-<section id="key-topics." class="level2" data-number="0.2">
-<h2 data-number="0.2" class="anchored" data-anchor-id="key-topics."><span class="header-section-number">0.2</span> Key Topics.</h2>
-<section id="data-wrangling-and-transformations." class="level3" data-number="0.2.1">
-<h3 data-number="0.2.1" class="anchored" data-anchor-id="data-wrangling-and-transformations."><span class="header-section-number">0.2.1</span> Data wrangling and transformations.</h3>
-<p>Learn to clean, reshape, and prepare your datasets like a pro, tackling common challenges using the power of data manipulation and transformation.</p>
-</section>
-<section id="data-visualization." class="level3" data-number="0.2.2">
-<h3 data-number="0.2.2" class="anchored" data-anchor-id="data-visualization."><span class="header-section-number">0.2.2</span> Data Visualization.</h3>
-<p>Learn to create informative and aesthetically pleasing charts using the versatile <code>ggplot2</code> package. Turn data into compelling stories with stunning visualizations using various ggplot extensions.</p>
-</section>
-<section id="publication-ready-summary-tables." class="level3" data-number="0.2.3">
-<h3 data-number="0.2.3" class="anchored" data-anchor-id="publication-ready-summary-tables."><span class="header-section-number">0.2.3</span> Publication Ready Summary Tables.</h3>
-<p>Learn to create Publication ready summary tables for descriptive and inferential statistics.</p>
-</section>
-<section id="reproducible-research-projects-and-workflows." class="level3" data-number="0.2.4">
-<h3 data-number="0.2.4" class="anchored" data-anchor-id="reproducible-research-projects-and-workflows."><span class="header-section-number">0.2.4</span> Reproducible Research Projects and Workflows.</h3>
-<p>Learn to document your processes meticulously, ensuring your analyses are transparent, replicable, and credible. Kick-start you research journey with reproducible workflows.</p>
-</section>
-</section>
-<section id="expected-outcomes." class="level2" data-number="0.3">
-<h2 data-number="0.3" class="anchored" data-anchor-id="expected-outcomes."><span class="header-section-number">0.3</span> Expected Outcomes.</h2>
-<p>By the end of this workshop, you’ll be able to undertake:</p>
+<section id="advanced-overview-of-ai-tools-and-github" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Advanced: Overview of AI tools and GitHub</h1>
+<p><strong>Source:</strong> <em>ChatGPT. (2024, October 22). Integrating AI Tools for Data Science: A Guide for Healthcare Professionals. OpenAI. https://chat.openai.com/</em></p>
+<section id="use-of-openai-chatgpt" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="use-of-openai-chatgpt"><span class="header-section-number">1.1</span> Use of openai (ChatGPT)</h2>
+<p>ChatGPT is an AI tool that can assist with code writing, debugging, visualization, and problem-solving in R, especially when using the tidyverse package. By incorporating ChatGPT into your data analysis workflow, you can enhance productivity, improve code quality, and expedite the learning process. Below is a structured guide on how you can leverage ChatGPT effectively in your data science workflow.</p>
+<section id="general-code-writing" class="level3" data-number="1.1.1">
+<h3 data-number="1.1.1" class="anchored" data-anchor-id="general-code-writing"><span class="header-section-number">1.1.1</span> General Code Writing</h3>
 <ul>
-<li><p><strong>Data Wrangling</strong>: Import data from various sources into R, clean and pre-process data for further analysis and transform data to explore insights and interpretations.</p></li>
-<li><p><strong>Data Visualization</strong>: Create a variety of data visualizations (plots and charts), customize visualizations to highlight key trends and communicate them effectively and apply the best practices of data visualization to make them impactful.</p></li>
-<li><p><strong>Reproducible Research</strong>: Clear and well-documented research workflows, efficiently organise your data and files for epidemiological research and data-science projects.</p></li>
+<li><p>Generate Code Templates: Ask ChatGPT to provide template code for tasks like data wrangling or visualization. Example: “<em>How do I filter rows based on a column value in R using dplyr?</em>”</p></li>
+<li><p>Convert Pseudocode to R Code: Write your logic in plain English, and ChatGPT can translate it into R code. Example: “<em>Write R code to group data by state and calculate the mean of a numeric column.</em>”</p></li>
 </ul>
-<p>This workshop isn’t just about learning - it’s about transforming the way you interact with data. Whether you’re a beginner eager to dive into the world of programming or a seasoned professional looking to sharpen your skills, this workshop is designed to provide practical knowledge and hands-on experience that will set you apart.</p>
-<p>We’re thrilled to have you join us and can’t wait to see the incredible things you’ll achieve with your new found skills in health data science using R. Let’s dive in and start this exciting journey together!</p>
+</section>
+<section id="debugging-and-error-handling" class="level3" data-number="1.1.2">
+<h3 data-number="1.1.2" class="anchored" data-anchor-id="debugging-and-error-handling"><span class="header-section-number">1.1.2</span> Debugging and Error Handling</h3>
+<ul>
+<li><p>Troubleshoot Errors: Share error messages with ChatGPT to get suggestions for fixes. Example: “<em>I’m getting ‘Error: object not found’—how do I fix it?</em>”</p></li>
+<li><p>Optimize Code: ChatGPT can suggest alternative, more efficient code using tidyverse functions. Example: “<em>Is there a better way to combine multiple mutate statements?</em>”</p></li>
+</ul>
+</section>
+<section id="ggplot2-visualization-support" class="level3" data-number="1.1.3">
+<h3 data-number="1.1.3" class="anchored" data-anchor-id="ggplot2-visualization-support"><span class="header-section-number">1.1.3</span> ggplot2 Visualization Support</h3>
+<ul>
+<li><p>Create Plots from Scratch: Describe the data and desired visualization, and ChatGPT will generate the corresponding ggplot2 code. Example: “<em>How do I create a scatter plot with color based on gender?</em>”</p></li>
+<li><p>Enhance Visuals: Ask for improvements like changing themes, adding titles, or customizing colors. Example: “<em>Improve the following bar plot by using a better theme and adding labels.</em>”</p></li>
+<li><p>Troubleshoot ggplot Issues: If a plot isn’t displaying as expected, provide the code and ask for corrections. Example: “<em>Why is my legend not showing up in this plot?</em>”</p></li>
+</ul>
+</section>
+<section id="data-wrangling-with-tidyverse" class="level3" data-number="1.1.4">
+<h3 data-number="1.1.4" class="anchored" data-anchor-id="data-wrangling-with-tidyverse"><span class="header-section-number">1.1.4</span> Data Wrangling with tidyverse</h3>
+<ul>
+<li><p>Get Help with Transformations: Explain your data structure and desired outcome to get tidyverse code for tasks like pivoting, grouping, or filtering. Example: “<em>How do I reshape data from long to wide format?</em>”</p></li>
+<li><p>Code Review: Paste your code for ChatGPT to review and improve readability or functionality. Example: “<em>Can you simplify this chain of dplyr commands?</em>”</p></li>
+</ul>
+</section>
+<section id="learning-and-exploring-r-functions" class="level3" data-number="1.1.5">
+<h3 data-number="1.1.5" class="anchored" data-anchor-id="learning-and-exploring-r-functions"><span class="header-section-number">1.1.5</span> Learning and Exploring R Functions</h3>
+<ul>
+<li><p>Discover New Functions: Ask about specific packages or new functions that suit your needs. Example: “<em>Is there an easier way to handle missing values in tidyverse?</em>”</p></li>
+<li><p>Understand Code Snippets: If you encounter unfamiliar code, paste it and ask for an explanation. Example: “<em>What does across() do in this code?</em>”</p></li>
+</ul>
+</section>
+<section id="advanced-analytics-and-machine-learning" class="level3" data-number="1.1.6">
+<h3 data-number="1.1.6" class="anchored" data-anchor-id="advanced-analytics-and-machine-learning"><span class="header-section-number">1.1.6</span> Advanced Analytics and Machine Learning</h3>
+<ul>
+<li><p>Modeling with tidymodels: Get help building predictive models using tidymodels. Example: “<em>How do I train a logistic regression model using tidymodels?</em>”</p></li>
+<li><p>Interpreting Results: ChatGPT can assist in understanding output from statistical models. Example: “<em>What does the p-value indicate in this summary?</em>”</p></li>
+</ul>
+</section>
+<section id="best-practices-for-chatgpt-usage" class="level3" data-number="1.1.7">
+<h3 data-number="1.1.7" class="anchored" data-anchor-id="best-practices-for-chatgpt-usage"><span class="header-section-number">1.1.7</span> Best Practices for ChatGPT Usage</h3>
+<ul>
+<li><p>Be Sensitive: The more details you provide about your problem, the better the solution. Example: “<em>How do I calculate the weighted mean for a survey dataset using survey package in R?</em>”</p></li>
+<li><p>Iterate and Refine: If the initial response isn’t perfect, refine your query or ask for clarifications. Example: “<em>Can you modify the code to include a facet grid by gender?</em>”</p></li>
+<li><p>Explore Alternatives: Request multiple approaches to solve a problem or plot data differently. Example: “<em>Can you show another way to visualize this data besides a bar plot?</em>”</p></li>
+</ul>
+</section>
+</section>
+<section id="use-of-github" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="use-of-github"><span class="header-section-number">1.2</span> Use of GitHub</h2>
+<p>GitHub is a platform for version control and collaboration using Git. It allows you to store code, track changes, and collaborate with others on data science projects. By integrating ChatGPT and GitHub into your workflow, healthcare professionals can efficiently develop, document, and collaborate on data science projects.</p>
+<section id="creating-a-github-repository" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="creating-a-github-repository"><span class="header-section-number">1.2.1</span> Creating a GitHub repository</h3>
+<ul>
+<li>Create a New Repository: Log into GitHub and click New Repository.</li>
+<li>Initialize the Repo: Add a README.md and select whether to add .gitignore or a license.</li>
+<li>Clone the Repository: Use the command below to copy the repository locally</li>
+</ul>
+</section>
+<section id="best-practices-for-using-chatgpt-and-github-together" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="best-practices-for-using-chatgpt-and-github-together"><span class="header-section-number">1.2.2</span> Best Practices for Using ChatGPT and GitHub Together</h3>
+<ul>
+<li>Document Code Changes: Use ChatGPT to generate clear commit messages and update documentation.</li>
+<li>Collaborative Coding: Discuss coding challenges with ChatGPT and refine your GitHub project using suggestions.</li>
+<li>Experiment Safely: Use Git branches for experimentation and ask ChatGPT for guidance when working with complex code.</li>
+</ul>
+</section>
+</section>
+<section id="using-ai-tools" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="using-ai-tools"><span class="header-section-number">1.3</span> Using AI tools</h2>
+<ul>
+<li>ChatGPT: General Code Assistance &amp; Troubleshooting</li>
+<li>GitHub Copilot: AI for Code Completion</li>
+<li>Google Bard: AI for Information Retrieval and Research</li>
+<li>Microsoft Excel Copilot: AI for Data Management</li>
+<li>AutoML Platforms (e.g., Google Cloud AutoML, H2O.ai)</li>
+<li>RStudio AI Features &amp; Plugins</li>
+</ul>
 
 
 </section>

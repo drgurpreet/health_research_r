@@ -1,0 +1,33 @@
+# Resource materials
+
+## Additional readings
+
+-   Grolemund, H., & Wickham, H. (2017). R for Data Science. O’Reilly Media. <https://r4ds.had.co.nz/>
+
+-   James, G., Witten, D., Hastie, T., & Tibshirani, R. (2013). An Introduction to Statistical Learning with Applications in R. Springer. <https://www.statlearning.com/>
+
+-   Wickham, H. (2016). ggplot2: Elegant Graphics for Data Analysis. Springer. <https://ggplot2-book.org/>
+
+-   Venables, W. N., & Ripley, B. D. (2002). Modern Applied Statistics with S (4th ed.). Springer. <https://www.stats.ox.ac.uk/pub/MASS4/>
+
+-   Peng, R. D. (2015). R Programming for Data Science. Leanpub. <https://bookdown.org/rdpeng/rprogdatascience/>
+
+-   Kuhn, M., & Johnson, K. (2013). Applied Predictive Modeling. Springer. <https://topepo.github.io/caret/>
+
+-   McKinney, W. (2017). Python for Data Analysis (2nd ed.). O’Reilly Media. <https://www.oreilly.com/library/view/python-for-data/9781491957653/> \[Note: While this book focuses on Python, it offers valuable insights into data manipulation and analysis that are transferable to R.\]
+
+## Additional resources
+
+-   ggplot2 Gallery: <https://exts.ggplot2.tidyverse.org/gallery/>
+
+-   R Graphics Cookbook: <https://r-graphics.org/>
+
+-   Tidyverse Course: <https://jhudatascience.org/tidyversecourse/get-data.html>
+
+-   Tidyverse Cookbook: <https://rstudio-education.github.io/tidyverse-cookbook/import.html>
+
+-   Data Wrangling Cheatsheet: <https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf>
+
+-   R Markdown: The Definitive Guide: <https://bookdown.org/yihui/rmarkdown/>
+
+-   Quarto: <https://quarto.org/>

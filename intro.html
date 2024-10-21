@@ -175,6 +175,14 @@ window.Quarto = {
     <a class="nav-link" href="./stat_summaries.html"> 
 <span class="menu-text">Statistical Summary Tables</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./chatGPT.html"> 
+<span class="menu-text">Advanced: Overview of AI tools and GitHub</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./additional.html"> 
+<span class="menu-text">Resource materials</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -213,10 +221,10 @@ window.Quarto = {
   <li><a href="#functions-and-their-arguments." id="toc-functions-and-their-arguments." class="nav-link" data-scroll-target="#functions-and-their-arguments."><span class="header-section-number">1.7.1</span> Functions and their arguments.</a></li>
   <li><a href="#objects." id="toc-objects." class="nav-link" data-scroll-target="#objects."><span class="header-section-number">1.7.2</span> Objects.</a>
   <ul class="collapse">
-  <li><a href="#vectors" id="toc-vectors" class="nav-link" data-scroll-target="#vectors">Vectors</a></li>
-  <li><a href="#data-types" id="toc-data-types" class="nav-link" data-scroll-target="#data-types">Data Types</a></li>
-  <li><a href="#lists" id="toc-lists" class="nav-link" data-scroll-target="#lists">Lists</a></li>
-  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
+  <li><a href="#vectors" id="toc-vectors" class="nav-link" data-scroll-target="#vectors"><span class="header-section-number">1.7.2.1</span> Vectors</a></li>
+  <li><a href="#data-types" id="toc-data-types" class="nav-link" data-scroll-target="#data-types"><span class="header-section-number">1.7.2.2</span> Data Types</a></li>
+  <li><a href="#lists" id="toc-lists" class="nav-link" data-scroll-target="#lists"><span class="header-section-number">1.7.2.3</span> Lists</a></li>
+  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages"><span class="header-section-number">1.7.2.4</span> Packages</a></li>
   </ul></li>
   </ul></li>
   </ul></li>
@@ -512,7 +520,7 @@ A guided tour
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># No argument</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.Date</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2024-10-21"</code></pre>
+<pre><code>[1] "2024-10-22"</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># One argument</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt</span>(<span class="dv">5197</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -627,8 +635,8 @@ Tip
 <pre><code>[1] 25</code></pre>
 </div>
 </div>
-<section id="vectors" class="level4">
-<h4 class="anchored" data-anchor-id="vectors">Vectors</h4>
+<section id="vectors" class="level4" data-number="1.7.2.1">
+<h4 data-number="1.7.2.1" class="anchored" data-anchor-id="vectors"><span class="header-section-number">1.7.2.1</span> Vectors</h4>
 <p>R stores values as a vector which is one dimensional array. Arrays can be two dimensional (similar to excel data/ tabular data), or multidimensional. Vectors are always one dimensional!</p>
 <p>Vectors can be a single value or a combination of values. We can create our own vectors using <em>c()</em> function.</p>
 <div class="cell">
@@ -666,8 +674,8 @@ Tip
 </div>
 </div>
 </section>
-<section id="data-types" class="level4">
-<h4 class="anchored" data-anchor-id="data-types">Data Types</h4>
+<section id="data-types" class="level4" data-number="1.7.2.2">
+<h4 data-number="1.7.2.2" class="anchored" data-anchor-id="data-types"><span class="header-section-number">1.7.2.2</span> Data Types</h4>
 <p>R recognizes different types of vectors based on the values in the vector.</p>
 <p>If all values are numbers (positive numbers, negative numbers, decimals), R will consider that vector as numerical and allows you to carry out mathematical operations/ functions. You can find the class of the vector by using <em>class()</em> function.R labels these vectors as “double”, “numeric”, or “integers”.</p>
 <div class="cell">
@@ -711,8 +719,8 @@ Tip
 </div>
 <p>Double, character, integer, logical, complex, raw, dates, etc… There are many other data types and objects but for now, lets start with these. You will understand additional types as you will proceed in your R journey!</p>
 </section>
-<section id="lists" class="level4">
-<h4 class="anchored" data-anchor-id="lists">Lists</h4>
+<section id="lists" class="level4" data-number="1.7.2.3">
+<h4 data-number="1.7.2.3" class="anchored" data-anchor-id="lists"><span class="header-section-number">1.7.2.3</span> Lists</h4>
 <p>In addition to vectors, lists are another powerful objects. A list can be considered as a vector of vectors!! They enable you to store multiple types of vectors together. A list can be made using a <em>list()</em> function. It is similar to <em>c()</em> function but creates a list rather than a vector. It is a good practice to name the vectors in the list.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>example_list <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">numbers =</span> number_vector, </span>
@@ -739,8 +747,8 @@ $alphabets
 </div>
 <p><strong>Important</strong>: Dataframes/ excelsheet we use are special type of lists. Each column is named and is a vector!!</p>
 </section>
-<section id="packages" class="level4">
-<h4 class="anchored" data-anchor-id="packages">Packages</h4>
+<section id="packages" class="level4" data-number="1.7.2.4">
+<h4 data-number="1.7.2.4" class="anchored" data-anchor-id="packages"><span class="header-section-number">1.7.2.4</span> Packages</h4>
 <p>There are thousands of functions in R. To be computationally efficient, R do not load all functions on start. It loads only base functions. As you want to use additional functions, we need to load the packages using <em>library()</em> function.</p>
 <p><strong>Important</strong>: The additional packages are installed once but loaded everytime you start R sessions.</p>
 
